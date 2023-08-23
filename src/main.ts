@@ -13,6 +13,9 @@ async function bootstrap() {
     forbidNonWhitelisted: true
   }));
 
+  const puerto = process.env.PORT ?? 3000;
+  console.log('APP CORRIENDO EN PUERTO ', puerto);
+
   await app.listen( process.env.PORT ?? 3000);
 }
 bootstrap();
